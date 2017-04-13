@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "nodemon osmosis_au_indeed_server.js",
-    "start": "forever start -a -l forever.log -o out.log -e err.log ./osmosis_au_indeed_server.js",
+    "start": "forever start -a -l forever.log -e err.log -c 'node --max_old_space_size=20' ./osmosis_au_indeed_server.js",
     "stop": "forever stop ./osmosis_au_indeed_server.js"
   }
 }
